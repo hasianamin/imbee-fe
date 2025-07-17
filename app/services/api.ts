@@ -3,10 +3,11 @@ import axios from "axios";
 
 export const fetchTags = async (inname?: string) => {
   const response = await axios.get(
-    `https://api.stackexchange.com/2.3/tags?order=desc&sort=popular&site=stackoverflow&page=1&pageSize=10${
+    `http://api.stackexchange.com/2.3/tags?order=desc&sort=popular&site=stackoverflow&page=1&pageSize=10${
       inname && `&inname=${inname}`
     }`
   );
+  consle.log("typo message");
   return response.data;
 };
 
